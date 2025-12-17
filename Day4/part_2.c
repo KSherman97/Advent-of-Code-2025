@@ -141,7 +141,7 @@ int search_grid(char **grid, int row_count, int col_count) {
 
 int main(int argc, char *argv[]) {
     FILE *file_ptr;
-    file_ptr = fopen("input.txt", "r");
+    file_ptr = fopen("simpleinput.txt", "r");
     if(file_ptr == NULL) {
         perror("Error opening file");
         exit(EXIT_FAILURE);
