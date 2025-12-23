@@ -12,17 +12,15 @@
  */
 
 int main(int argc, char *argv[]) {
-    FILE *file_ptr;
-    char line_buffer[8192];
-
-    // open the file in read mode ("r")
-    file_ptr = fopen("simplefailure.txt", "r");
-
+    FILE *file_ptr = fopen("simplefailure.txt", "r");
+    
     // failsafe file buffer
     if(file_ptr == NULL) {
         perror("Error opening file");
         exit(EXIT_FAILURE);
     }
+
+    char line_buffer[8192];
 
     int col_dim = 0;
     int row_dim = 0;
